@@ -11,26 +11,28 @@ import XCTest
 
 class Day_TooTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testViewJournal() {
+        let journal = Journal(entries: ["Once upon a time", "I went to the store", "It was dope"])
+        let expected = "\nJournal Entries\n----------------------\n1 - Once upon a time\n\n2 - I went to the store\n\n3 - It was dope\n"
+        let actual =  journal.description
+        XCTAssertTrue(expected == actual)
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testAddEntry() {
+        let journal = Journal(entries: ["Once upon a time", "I went to the store", "It was dope"])
+        journal.addNewEntry("testME!")
+        let expected = "testME!"
+        let result = journal.entries[3]
+        XCTAssertTrue(expected == result)
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testNSCoderRoundTrip() {
+        let journal = Journal(entries: ["Once upon a time", "I went to the store", "It was dope"])
+        let testNumber = arc4random_uniform(UInt32.max)
+        let expected = String(testNumber)
+        journal.addNewEntry(expected)
+        let newJournal = NSKeyedUnarchiver.unarchiveObject(withFile: "/Users/noj/Code/TIY/Day_Too/journal.txt") as? Journal
+        XCTAssertTrue(newJournal!.entries.contains(expected))
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
+
 }

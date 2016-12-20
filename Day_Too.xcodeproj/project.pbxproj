@@ -11,6 +11,8 @@
 		E88A341E1E09B09B0043D81A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E88A341D1E09B09B0043D81A /* Assets.xcassets */; };
 		E88A34211E09B09B0043D81A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E88A341F1E09B09B0043D81A /* MainMenu.xib */; };
 		E88A342C1E09B09B0043D81A /* Day_TooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88A342B1E09B09B0043D81A /* Day_TooTests.swift */; };
+		E88A34371E09B0B00043D81A /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88A34361E09B0B00043D81A /* Journal.swift */; };
+		E88A34391E09B7B00043D81A /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88A34381E09B7B00043D81A /* Main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,8 @@
 		E88A34271E09B09B0043D81A /* Day_TooTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Day_TooTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88A342B1E09B09B0043D81A /* Day_TooTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day_TooTests.swift; sourceTree = "<group>"; };
 		E88A342D1E09B09B0043D81A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E88A34361E09B0B00043D81A /* Journal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
+		E88A34381E09B7B00043D81A /* Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				E88A341B1E09B09B0043D81A /* AppDelegate.swift */,
+				E88A34381E09B7B00043D81A /* Main.swift */,
+				E88A34361E09B0B00043D81A /* Journal.swift */,
 				E88A341D1E09B09B0043D81A /* Assets.xcassets */,
 				E88A341F1E09B09B0043D81A /* MainMenu.xib */,
 				E88A34221E09B09B0043D81A /* Info.plist */,
@@ -192,6 +198,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E88A34391E09B7B00043D81A /* Main.swift in Sources */,
+				E88A34371E09B0B00043D81A /* Journal.swift in Sources */,
 				E88A341C1E09B09B0043D81A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
